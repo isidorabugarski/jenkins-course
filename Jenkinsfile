@@ -79,7 +79,7 @@ pipeline {
         }
         stage('Dynamic'){
             when {
-                branch 'feature/multi'
+                branch 'feature/multi/*'
             }
             steps {
                 echo (message: "Stage: Dynamic")
