@@ -77,6 +77,14 @@ pipeline {
                 }
             }
         }
+        stage('Dynamic'){
+            when {
+                branch 'feature/multi'
+            }
+            steps {
+                echo (message: "Stage: Dynamic")
+            }
+        }
         stage('Publish'){
             steps {
                 echo (message: "Stage: Publish")
